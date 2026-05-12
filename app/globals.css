@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #0a0e27;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Neon Glow Effects */
+.neon-glow-magenta {
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.6), 0 0 20px rgba(255, 0, 110, 0.4), inset 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.6), 0 0 20px rgba(0, 255, 0, 0.4), inset 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.text-neon-magenta {
+  color: #FF006E;
+  text-shadow: 0 0 10px rgba(255, 0, 110, 0.8), 0 0 20px rgba(255, 0, 110, 0.4);
+}
+
+.text-neon-green {
+  color: #00FF00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.text-neon-cyan {
+  color: #00FFFF;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply px-8 py-3 font-bold rounded-lg transition-all duration-200;
+  background-color: #FF006E;
+  color: #ffffff;
+  border: 2px solid #FF006E;
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.5);
+}
+
+.btn-primary:hover {
+  background-color: #ff1a7f;
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.8);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  @apply px-6 py-2 font-semibold rounded-lg transition-all duration-200;
+  background-color: transparent;
+  color: #00FF00;
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  transform: scale(1.05);
+}
+
+/* Input Styles */
+.arcade-input {
+  @apply w-full px-4 py-3 rounded-lg font-semibold transition-all duration-200;
+  background-color: rgba(26, 31, 58, 0.8);
+  border: 2px solid #00FF00;
+  color: #00FF00;
+}
+
+.arcade-input::placeholder {
+  color: rgba(0, 255, 0, 0.5);
+}
+
+.arcade-input:focus {
+  outline: none;
+  border-color: #00FFFF;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* Card Styles */
+.arcade-card {
+  @apply p-6 rounded-lg border-2 transition-all duration-200;
+  background-color: rgba(26, 31, 58, 0.6);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.arcade-card:hover {
+  border-color: #00FFFF;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Arcade Grid */
+@keyframes arcade-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+.arcade-flicker {
+  animation: arcade-flicker 2s infinite;
+}
+
+/* Pricing Cards */
+.pricing-card {
+  @apply relative p-8 rounded-xl border-2 transition-all duration-300;
+  background-color: rgba(26, 31, 58, 0.6);
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+.pricing-card.featured {
+  border-color: #FF006E;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.5);
+  transform: scale(1.05);
+}
+
+.pricing-card:hover {
+  border-color: #00FFFF;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
